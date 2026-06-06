@@ -1,23 +1,19 @@
 # DevOps na Pratica - Fase 1
 
-Projeto da disciplina **DevOps na Pratica**, desenvolvido para a Fase 1: Configuracao e Automacao Inicial.
+Projeto da disciplina **DevOps na Prática**, desenvolvido para a Fase 1: Configuração e Automacão Inicial.
 
 ## Estudante
 
 Mateus Henrique Fardin Lima
 
-## Repositorio
-
-https://github.com/mfardinpucrs/devops
-
 ## Objetivo
 
-Demonstrar a configuracao inicial de um fluxo DevOps com:
+Demonstrar a configuração inicial de um fluxo DevOps com:
 
-- aplicacao Node.js versionada no GitHub;
-- pipeline de Integracao Continua com GitHub Actions;
+- aplicacão Node.js versionada no GitHub;
+- pipeline de Integracão Contínua com GitHub Actions;
 - testes automatizados;
-- scripts de Infraestrutura como Codigo com AWS CloudFormation.
+- scripts de Infraestrutura como Código (IaC) com AWS CloudFormation.
 
 ## Estrutura do projeto
 
@@ -40,7 +36,7 @@ devops/
 └── README.md
 ```
 
-## Pre-requisitos
+## Pré-requisitos
 
 - Node.js 20 ou superior
 - npm
@@ -61,13 +57,6 @@ Executar a aplicacao:
 npm start
 ```
 
-Acessar no navegador ou via curl:
-
-```bash
-curl http://localhost:3000/
-curl http://localhost:3000/health
-```
-
 ## Executar testes
 
 ```bash
@@ -82,7 +71,7 @@ npm run build
 
 ## Pipeline de CI
 
-O pipeline de Integracao Continua esta configurado em:
+O pipeline de Integração Contínua esta configurado em:
 
 ```text
 .github/workflows/ci.yml
@@ -90,13 +79,13 @@ O pipeline de Integracao Continua esta configurado em:
 
 Ele executa automaticamente:
 
-1. checkout do repositorio;
-2. configuracao do Node.js 20;
-3. instalacao de dependencias com `npm ci`;
-4. execucao dos testes automatizados;
-5. execucao do build.
+1. checkout do repositório;
+2. configuração do Node.js 20;
+3. instalação de dependências com `npm ci`;
+4. execução dos testes automatizados;
+5. execução do build.
 
-## Infraestrutura como Codigo
+## Infraestrutura como Código
 
 Os arquivos de AWS CloudFormation estao em:
 
@@ -104,13 +93,13 @@ Os arquivos de AWS CloudFormation estao em:
 infra/cloudformation/
 ```
 
-O template principal e:
+O template principal é:
 
 ```text
 infra/cloudformation/template.yml
 ```
 
-As instrucoes de validacao, criacao e remocao da stack estao em:
+As instruções de validação, criação e remoção da stack estção em:
 
 ```text
 infra/cloudformation/README.md
