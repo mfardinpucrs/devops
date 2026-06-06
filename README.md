@@ -80,7 +80,7 @@ O pipeline de Integração Contínua esta configurado em:
 Ele executa automaticamente:
 
 1. checkout do repositório;
-2. configuração do Node.js 20;
+2. configuração do Node.js 24;
 3. instalação de dependências com `npm ci`;
 4. execução dos testes automatizados;
 5. execução do build.
