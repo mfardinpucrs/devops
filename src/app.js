@@ -18,7 +18,7 @@ function buildResponse(pathname) {
     return {
       statusCode: 200,
       body: {
-        message: 'Projeto DevOps na Pratica - Fase 1',
+        message: 'Projeto DevOps na Prática - Fase 1',
         repository: 'https://github.com/mfardinpucrs/devops'
       }
     };
@@ -27,7 +27,7 @@ function buildResponse(pathname) {
   return {
     statusCode: 404,
     body: {
-      error: 'Rota nao encontrada'
+      error: 'Rota não encontrada'
     }
   };
 }
