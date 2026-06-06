@@ -32,7 +32,7 @@ function buildResponse(pathname) {
   };
 }
 
-module.exports = {
+export {
   getHealthStatus,
   buildResponse
 };
