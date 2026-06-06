@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09' 
+  Description: > 
+  Template CloudFormation para provisionamento inicial de infraestrutura do projeto da disciplina DevOps na Prática - Fase 1. 
+  
+Parameters: 
+  BucketName: 
+    Type: String 
+    Description: Nome único do bucket S3 utilizado no projeto. 
+    Default: mfardinpucrs-devops-fase1 
+
+Resources: 
+  DevOpsBucket: 
+    Type: AWS::S3::Bucket 
+    Properties: 
+      BucketName: !Ref BucketName 
+      VersioningConfiguration: 
+        Status: Enabled 
+      Tags: 
+        - Key: Project 
+          Value: DevOpsNaPratica 
+        - Key: Phase 
+          Value: Fase1 
+        - Key: Owner 
+          Value: mfardinpucrs 
+
+Outputs: 
+  BucketNameOutput: 
+    Description: Nome do bucket S3 criado pelo CloudFormation. 
+    Value: !Ref DevOpsBucket 
+    
+  BucketArnOutput: 
+    Description: ARN do bucket S3 criado. 
+    Value: !GetAtt DevOpsBucket.Arn
