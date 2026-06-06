@@ -1,6 +1,6 @@
 # Infraestrutura como Codigo - AWS CloudFormation
 
-Este diretorio contem o template CloudFormation utilizado na Fase 1 do projeto da disciplina DevOps na Pratica.
+Este diretorio contém o template CloudFormation utilizado na Fase 1 do projeto da disciplina DevOps na Pratica.
 
 ## Arquivo principal
 
@@ -24,7 +24,7 @@ aws cloudformation validate-template \
 
 ## Criar a stack
 
-O nome do bucket S3 deve ser globalmente unico na AWS. Se o nome padrao ja estiver em uso, altere o valor do parametro `BucketName`.
+O nome do bucket S3 deve ser globalmente único na AWS. Se o nome padrão já estiver em uso, será necessário alterar o valor do parametro `BucketName`. OBS: Por se tratar da primeira fase do trabalho da disciplina, não usei a conta AWS para validar a exisência do nome deste bucket ainda.
 
 ```bash
 aws cloudformation create-stack \
@@ -46,9 +46,3 @@ aws cloudformation describe-stacks \
 aws cloudformation delete-stack \
   --stack-name devops-fase1-stack
 ```
-
-## Observacoes de seguranca
-
-- Nao armazene credenciais AWS no repositorio.
-- Utilize configuracao local da AWS CLI ou segredos em ambiente seguro.
-- Revise os recursos criados para evitar custos desnecessarios.
