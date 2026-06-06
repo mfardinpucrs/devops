@@ -1,5 +1,5 @@
-const http = require('node:http');
-const { buildResponse } = require('./app');
+import http from 'node:http';
+import { buildResponse } from './app.js';
 
 const port = process.env.PORT || 3000;
 
@@ -14,5 +14,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`Aplicacao executando na porta ${port}`);
+  console.log(`Aplicação executando na porta ${port}`);
 });
