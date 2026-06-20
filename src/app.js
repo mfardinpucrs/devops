@@ -18,8 +18,9 @@ function buildResponse(pathname) {
     return {
       statusCode: 200,
       body: {
-        message: 'Projeto DevOps na Prática - Fase 1',
-        repository: 'https://github.com/mfardinpucrs/devops'
+        message: 'Projeto DevOps na Prática - Fase 2',
+        repository: 'https://github.com/mfardinpucrs/devops',
+        status: 'Aplicação executando em container Docker'
       }
     };
   }
