@@ -14,8 +14,9 @@ test('buildResponse deve retornar a resposta da rota raiz', () => {
   const response = buildResponse('/');
 
   assert.equal(response.statusCode, 200);
-  assert.equal(response.body.message, 'Projeto DevOps na Prática - Fase 1');
+  assert.equal(response.body.message, 'Projeto DevOps na Prática - Fase 2');
   assert.equal(response.body.repository, 'https://github.com/mfardinpucrs/devops');
+  assert.equal(response.body.status, 'Aplicação executando em container Docker');
 });
 
 test('buildResponse deve retornar health check', () => {
